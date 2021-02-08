@@ -1,0 +1,104 @@
+<div class="card mt-5">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+  
+    <div class="card-body">
+      <form novalidate
+            (ngSubmit)="saveMountain()"
+            [formGroup]="mountainForm">
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="mountainNameId">Mountain</label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="mountainNameId"
+                   type="text"
+                   placeholder="Nombre"
+                   formControlName="nombre"
+                   name="nombre" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="mountainDescriptionId">Description</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                   id="mountainDescriptionId"
+                   type="text"
+                   placeholder="Descripcion"
+                   rows=4
+                   formControlName="descripcion"
+                   name="descripcion" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="mountainAlturaId">Altitud</label>
+  
+          <div class="col-md-8">
+            <textarea class="form-control"
+                      id="mountainAlturaId"
+                      placeholder="Altura"
+                      formControlName="altura"
+                      name="altura"></textarea>
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="mountainDesnivelId">Desnivel</label>
+  
+          <div class="col-md-8">
+            <textarea class="form-control"
+                      id="mountainDesnivelId"
+                      placeholder="Desnivel"
+                      formControlName="desnivel"
+                      name="desnivel"></textarea>
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label class="col-md-2 col-form-label"
+                 for="mountainTimeId">Tiempo de subida</label>
+  
+          <div class="col-md-8">
+            <input class="form-control"
+                      id="mountainTimeId"
+                      placeholder="Tiempo"
+                      formControlName="tiempo"
+                      name="tiempo" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <div class="offset-md-2 col-md-4">
+            <button class="btn btn-primary mr-3"                    
+                    type="submit">
+              Save
+            </button>
+            <button class="btn btn-outline-secondary mr-3"                    
+                    type="button"
+                    title="Cancel your edits"
+                    [routerLink]="['']">
+              Cancel
+            </button>
+            <button class="btn btn-outline-warning"                  
+                    type="button"
+                    title="Delete this mountain"
+                    (click)="deleteMountain()">
+              Delete
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+    <div class="alert alert-danger"
+         *ngIf="errorMessage">{{errorMessage}}
+    </div>
+  </div>

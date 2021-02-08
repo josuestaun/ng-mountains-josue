@@ -1,0 +1,29 @@
+<div class="card w-100 mt-5">
+  <img src="{{mountain.imagen}}" class="figure-img img-fluid rounded w-75 mx-auto mt-2 mb-2">
+  <div class="card-body">
+    <h4 class="card-title">{{mountain.nombre}}</h4>
+    <p class="card-text">Descripcion: {{mountain.descripcion}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h5>Altura: {{mountain.altura}}</h5></li>
+    <li class="list-group-item"><h5>Desnivel: {{mountain.desnivel}}</h5></li>
+    <li class="list-group-item"><h5>Tiempo de subida: {{mountain.tiempo}}</h5></li>
+  </ul>
+  <div id="map-container-google-1" class="d-flex justify-content-center card-body z-depth-1-half map-container" style="height: 200px">
+    <iframe class="mx-auto" width="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11734.994531170856!2d0.49124523022389777!3d42.66668189476446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a87ba7771bd869%3A0xa6365faef24e87a9!2sCollarada!5e0!3m2!1ses!2ses!4v1611319893285!5m2!1ses!2ses" frameborder="0"
+      style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="card-body d-flex justify-content-center">
+    <button class="btn btn-outline-secondary mr-3"
+            style="width:80px"
+            (click)="onBack()">
+      <i class="fa fa-chevron-left"></i> Volver
+    </button>
+    <button class="btn btn-outline-primary"
+            style="width:80px"
+            (click)="goEdit()">
+      Editar
+    </button>
+  </div>
+</div>
+

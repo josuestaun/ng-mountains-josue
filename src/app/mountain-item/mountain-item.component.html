@@ -1,0 +1,13 @@
+<div class="card" (click)="hideDesc()" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="d-flex justify-content-center card-title"><a [routerLink]="['/mountains', mountain.id]">{{mountain.nombre}}</a></h5>
+  </div>
+  <ul  *ngIf="isVisibleDesc" class="list-group list-group-flush">
+    <li  class="list-group-item">Descripcion: {{mountain.descripcion}}</li>
+    <li class="list-group-item"><strong>Altura:</strong> {{mountain.altura}}</li>
+    <li class="list-group-item"><strong>Desnivel:</strong> {{mountain.desnivel}}</li>
+  </ul>
+  <div class="card-body">
+    <h6>Tiempo subida: {{mountain.tiempo}}</h6>
+  </div>
+</div>
