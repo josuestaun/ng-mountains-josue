@@ -24,11 +24,11 @@ export class MountainEditComponent implements OnInit{
 
   ngOnInit(): void {
     this.mountainForm = this.fb.group({
-      nombre: '',
-      descripcion: '',
-      altura: '',
-      desnivel: '',
-      tiempo: ''
+        nombre: '',
+        descripcion: '',
+        altura: '',
+        desnivel: '',
+        tiempo: ''
     });
 
     // Read the product Id from the route parameter
@@ -75,7 +75,6 @@ export class MountainEditComponent implements OnInit{
       }
     }
   }
-
 
   saveMountain(): void {
     if (this.mountainForm.valid) {

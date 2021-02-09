@@ -10,7 +10,7 @@ import { Mountain } from './mountain';
   providedIn: 'root'
 })
 export class MountainService {
-  private mountainsUrl = 'api/mountains';
+  private mountainsUrl = 'localhost:8000/mountains';
 
   constructor(private http: HttpClient) { }
 
